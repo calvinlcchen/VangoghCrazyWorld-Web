@@ -216,7 +216,7 @@ function saveimgas() {
         link.click();
     };
 
-    reader.readAsDataURL(outputImgContainer.elt.src);
+    reader.readAsDataURL(outputImgContainer.elt);
     
  // var imgOrUrl;
  // imgOrUrl = outputImgContainer.elt;
