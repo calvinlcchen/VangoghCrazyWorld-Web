@@ -206,23 +206,11 @@ function onPredictClick2() {
 }
 
 function saveimgas() {
-    var reader = new FileReader();
-    reader.onloadend = function () {    
-        var base64 = reader.result ;
-        var link = document.createElement("a");
-
-        link.setAttribute("href", base64);
-        link.setAttribute("download", "download.png");
-        link.click();
-    };
-
-    reader.readAsDataURL(outputImgContainer.elt);
-    
- // var imgOrUrl;
- // imgOrUrl = outputImgContainer.elt;
-  //console.log(imgOrUrl);
- // if (typeof imgOrUrl == 'object')
- //    imgOrUrl = outputImgContainer.elt.src;
-  //console.log(imgOrUrl);
- // window.location.href=imgOrUrl.replace("image/png","image/octet-stream");
+  var imgOrUrl;
+  imgOrUrl = outputImgContainer.elt;
+ //console.log(imgOrUrl);
+  if (typeof imgOrUrl == 'object')
+     imgOrUrl = outputImgContainer.elt.src;
+ //console.log(imgOrUrl);
+  window.location.href=imgOrUrl.replace("image/png","image/octet-stream");
 }
